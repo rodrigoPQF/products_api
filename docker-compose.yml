@@ -1,0 +1,14 @@
+version: '3'
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: senha
+      MYSQL_RANDOM_ROOT_PASSWORD: true
+      MYSQL_DATABASE: products_api
+    ports:
+      - "3306:3306"
+    volumes:
+      - /path/on/host:/var/lib/mysql
